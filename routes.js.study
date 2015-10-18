@@ -1,0 +1,33 @@
+var routes = (function () {
+
+  return {
+    init: function(server) {
+      // you can have multiple chaining processing logic in one route
+      server.get('/api', function (req, res, next) {
+        console.log('this is api internal processing');
+        // next();
+        next('oops'); // the name in next() means pass to the exact name of routes
+      }, function (req, res, next) {
+        res.send('this is api');
+        next();
+      });
+      
+      server.get('/api/hello', function (req, res, next) {
+        res.send('hello world');
+        next();
+      });
+      
+      server.get({
+        name: 'oops',
+        path: '/api/oops'
+      }, function (req, res, next) {
+        console.log('gone into ooops');
+        res.send('this is oops');
+        next();
+      });
+    }
+  };
+
+})();
+
+module.exports = routes;

@@ -1,0 +1,22 @@
+{
+  "name": "restify_token",
+  "version": "0.0.1",
+  "description": "this is a demo by using jwt on restify api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "restify",
+    "api",
+    "jwt"
+  ],
+  "author": "ttux",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^5.4.0",
+    "mongoose": "^4.1.11",
+    "restify": "^4.0.3"
+  }
+}

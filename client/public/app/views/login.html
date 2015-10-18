@@ -1,0 +1,15 @@
+<h3>login here</h3>
+<br>
+<br>
+
+<form ng-keyup="$event.keyCode == 13 && submit(user)">
+  Name: <input type="text" ng-model=user.username>
+  <br>
+  Password: <input type="password" ng-model=user.password>
+  <br>
+  <input type="button" value="Submit" ng-click="submit(user)"/>
+</form>
+<br>
+<br>
+<span id="error">{{ errorMsg }}</span>
+

@@ -11,14 +11,14 @@ var routes = (function () {
       // });
       
       // POST /api/authenticate
-      server.post('/api/authenticate', jwtAuthVerify.authenticate);
+      server.post('/demo/api/authenticate', jwtAuthVerify.authenticate);
 
       // GET /api/users list all users
-      server.get('/api/users', jwtAuthVerify.verify, userCtrl.index);
+      server.get('/demo/api/users', jwtAuthVerify.verify, userCtrl.index);
       // server.get('/api/users', userCtrl.index);
 
       // POST /api/users create a user
-      server.post('/api/users', userCtrl.create);
+      server.post('/demo/api/users', userCtrl.create);
 
       // match the path '/'
       server.get(/\//, restify.serveStatic({

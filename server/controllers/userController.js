@@ -7,7 +7,7 @@ var UserController = (function () {
      */
     index: function (req, res, next) {
       var options = {
-        pageSize: req.params.pageSize || 3,
+        pageSize: req.params.pageSize || 10,
         pageNum: req.params.pageNum || 0,
         moveCursor: req.params.moveCursor || 0,
         firstId: req.params.firstId || ''
